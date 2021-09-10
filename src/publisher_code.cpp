@@ -1,5 +1,6 @@
 #include "ros/ros.h"
 #include "std_msgs/String.h"
+#include "publisher_package/topic_name.h"
 
 #include <sstream>
 
@@ -61,7 +62,7 @@ int main(int argc, char **argv)
     std_msgs::String msg;
 
     std::stringstream ss;
-    ss << "hello world " << count;
+    ss << "topic_name" << count;
     msg.data = ss.str();
 
     ROS_INFO("%s", msg.data.c_str());
